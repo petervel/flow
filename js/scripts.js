@@ -1,26 +1,29 @@
-const clubs = [
-  { name: "ADO Den Haag" },
-  { name: "AFC Ajax" },
-  { name: "AZ" },
-  { name: "Emmen" },
-  { name: "Feyenoord" },
-  { name: "Fortuna Sittard" },
-  { name: "FC Groningen" },
-  { name: "sc Heerenveen" },
-  { name: "Heracles Almelo" },
-  { name: "PEC Zwolle" },
-  { name: "PSV Eindhoven" },
-  { name: "RKC Waalwijk" },
-  { name: "Sparta Rotterdam" },
-  { name: "FC Twente" },
-  { name: "FC Utrecht" },
-  { name: "Vitesse" },
-  { name: "VVV Venlo" },
-  { name: "Willem II" }
-]
+import teams from 'teams'
+
+window.Dom = {}
+
+Dom.div = function(opts)
+{
+  if (opts == null) opts = {};
+
+  div = document.createElement('div');
+  for (var [key, value] of opts) {
+    div[key] = value
+  }
+  return div;
+}
 
 document.body.onload = function() {
-  clubs.forEach(function(club) {
-    document.write(club.name);
+  teams.forEach(function(team) {
+    var teamDiv = Dom.div('team');
+
+    const colorCount = team.colors.length;
+    team.colors.forEach(function(color) {
+      var colorDiv = Dom.div();
+      colorDiv.style.height = `${Math.round(100 / colorCount)}%`
+      colorDiv.style.backgroundColor = color;
+    });
+
+    document.appendChild(teamDiv);
   });
 }
