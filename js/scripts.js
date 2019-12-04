@@ -22,6 +22,7 @@ document.body.onload = function() {
       var colorDiv = Dom.div();
       colorDiv.style.height = `${Math.round(100 / colorCount)}%`
       colorDiv.style.backgroundColor = color;
+      teamDiv.appendChild(colorDiv);
     });
 
     document.appendChild(teamDiv);
