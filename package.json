@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel": "babel --presets es2015 js/scripts.js -o build/scripts.js"
+    "babel": "babel --presets es2015 js --out-dir build/"
   },
   "repository": {
     "type": "git",
