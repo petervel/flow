@@ -1,4 +1,6 @@
-import teams from 'teams'
+import _ from 'lodash';
+
+import teams from 'teams.js'
 
 window.Dom = {}
 

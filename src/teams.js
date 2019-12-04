@@ -1,4 +1,4 @@
-export const teams = [
+const teams = [
   {
 		name: "ADO Den Haag",
 		colors: [
@@ -127,3 +127,7 @@ export const teams = [
     ]
   }
 ]
+
+mode.exports = {
+	teams: teams
+}

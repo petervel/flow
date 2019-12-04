@@ -2,10 +2,9 @@
   "name": "flow",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "babel": "babel --presets es2015 src --out-dir build/",
-    "build": "webpack"
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -14,6 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "private": true,
   "bugs": {
     "url": "https://github.com/petervel/flow/issues"
   },
@@ -21,6 +21,8 @@
   "dependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "lodash": "^4.17.15",
     "npm": "^6.13.1"
   },
   "devDependencies": {
